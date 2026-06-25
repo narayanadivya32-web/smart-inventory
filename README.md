@@ -51,12 +51,12 @@ The application allows users to manage products, track stock movements, monitor 
 * FastAPI
 * Python
 * PostgreSQL
-* SQLAlchemy
+* SQL
 * JWT Authentication
 
 ### Frontend
 
-* Angular 20
+* Angular 21
 * TypeScript
 * HTML5
 * CSS3
