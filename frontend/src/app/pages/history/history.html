@@ -1,0 +1,62 @@
+<div class="page">
+
+    <div class="topbar">
+
+        <h2>📜 Stock Movement History</h2>
+
+        <a routerLink="/dashboard" class="back-btn">
+            ← Back to Dashboard
+        </a>
+
+    </div>
+
+    <div class="table-card">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Product</th>
+                    <th>Warehouse</th>
+                    <th>Type</th>
+                    <th>Quantity</th>
+                    <th>Date</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr *ngFor="let m of movements">
+
+                    <td>{{m.id}}</td>
+                    <td>{{m.product}}</td>
+                    <td>{{m.warehouse}}</td>
+
+                    <td>
+
+                        <span
+                            [class.in]="m.movement_type=='IN'"
+                            [class.out]="m.movement_type=='OUT'">
+
+                            {{m.movement_type}}
+
+                        </span>
+
+                    </td>
+
+                    <td>{{m.quantity}}</td>
+
+                    <td>{{m.created_at | date:'dd-MM-yyyy HH:mm'}}</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>

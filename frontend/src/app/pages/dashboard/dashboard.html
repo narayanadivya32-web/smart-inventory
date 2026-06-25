@@ -1,0 +1,105 @@
+<div class="page">
+
+    <div class="topbar">
+
+        <h2>📦 Smart Inventory Dashboard</h2>
+
+        <button class="logout-btn" (click)="logout()">
+            Logout
+        </button>
+
+        <a routerLink="/add-product" class="add-btn">
+    ➕ Add Product
+</a>
+
+        <button class="history-btn" routerLink="/history">
+  📜 Movement History
+</button>
+
+
+        <button class="movement-btn" routerLink="/movement">
+    Stock Movement
+</button>
+
+    </div>
+
+    <div class="stats">
+
+        <div class="card blue">
+            <h1>{{totalProducts}}</h1>
+            <p>Total Products</p>
+        </div>
+
+        <div class="card orange">
+            <h1>{{lowProducts}}</h1>
+            <p>Low Stock</p>
+        </div>
+
+        <div class="card red">
+            <h1>{{criticalProducts}}</h1>
+            <p>Critical Stock</p>
+        </div>
+
+    </div>
+
+    <div class="table-card">
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                placeholder="🔍 Search products..."
+                [(ngModel)]="searchText"
+                (input)="filterProducts()">
+
+        </div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>SKU</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Stock</th>
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr *ngFor="let p of filteredProducts">
+
+                    <td>{{p.sku}}</td>
+                    <td>{{p.name}}</td>
+                    <td>{{p.category}}</td>
+                    <td>{{p.current_stock}}</td>
+
+                    <td>
+
+                        <span
+                            [ngClass]="{
+                              'critical':p.status=='CRITICAL',
+                              'low':p.status=='LOW',
+                              'ok':p.status=='OK'
+                            }">
+
+                            {{p.status}}
+
+                        </span>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>

@@ -1,0 +1,48 @@
+<div class="container">
+
+  <div class="card">
+
+    <h2>📦 Stock Movement</h2>
+
+    <label>Product</label>
+
+    <select [(ngModel)]="movement.product_id">
+
+      <option *ngFor="let p of products" [value]="p.id">
+        {{p.name}}
+      </option>
+
+    </select>
+
+    <label>Movement Type</label>
+
+    <select [(ngModel)]="movement.movement_type">
+
+      <option value="IN">Stock In</option>
+      <option value="OUT">Stock Out</option>
+
+    </select>
+
+    <label>Quantity</label>
+
+    <input
+      type="number"
+      [(ngModel)]="movement.quantity">
+
+   <label>Warehouse</label>
+
+<select [(ngModel)]="movement.warehouse_id">
+
+    <option [value]="1">Main Warehouse</option>
+
+</select>
+
+    <button (click)="saveMovement()">
+
+      Save Movement
+
+    </button>
+
+  </div>
+
+</div>

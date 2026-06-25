@@ -1,0 +1,88 @@
+<div class="page">
+
+    <div class="header">
+
+        <h2>📦 Products</h2>
+
+        <a
+            routerLink="/add-product"
+            class="add-btn">
+
+            ➕ Add Product
+
+        </a>
+
+    </div>
+
+    <input
+        type="text"
+        placeholder="🔍 Search products..."
+        [(ngModel)]="searchText"
+        class="search">
+
+    <div class="table-card">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>SKU</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Stock</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr *ngFor="let p of filteredProducts">
+
+                    <td>{{p.sku}}</td>
+                    <td>{{p.name}}</td>
+                    <td>{{p.category}}</td>
+                    <td>{{p.current_stock}}</td>
+
+                    <td>
+
+                        <span
+                            [class.critical]="p.status==='CRITICAL'"
+                            [class.low]="p.status==='LOW'"
+                            [class.ok]="p.status==='OK'">
+
+                            {{p.status}}
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <button class="edit-btn">
+                            ✏ Edit
+                        </button>
+
+                        <button
+                            class="delete-btn"
+                            (click)="deleteProduct(p.id)">
+
+                            🗑 Delete
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
