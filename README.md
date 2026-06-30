@@ -236,7 +236,7 @@ GET /api/reports
 
 ---
 
-# 📷 Screenshots
+# Screenshots
 
 * Login Page
 * Dashboard
@@ -248,7 +248,7 @@ GET /api/reports
 
 ---
 
-# 🚀 Future Enhancements
+#  Future Enhancements
 
 * Role-Based Access Control (Admin, Manager, Employee)
 * Deploy Frontend using AWS Amplify
@@ -264,7 +264,7 @@ GET /api/reports
 
 ---
 
-# 👩‍💻 Author
+# Author
 
 **Divya Narayan**
 
