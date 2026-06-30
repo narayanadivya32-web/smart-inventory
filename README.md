@@ -1,4 +1,4 @@
-# 🚀 Smart Inventory Management System
+#  Smart Inventory Management System
 
 A full-stack Inventory Management System built using **FastAPI**, **Angular**, **PostgreSQL**, **Docker**, and **AWS**.
 
@@ -6,7 +6,7 @@ The application helps businesses efficiently manage products, track inventory mo
 
 ---
 
-# 📌 Features
+# Features
 
 ## Authentication
 
@@ -73,7 +73,7 @@ The application helps businesses efficiently manage products, track inventory mo
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```text
 smart-inventory
@@ -96,7 +96,7 @@ smart-inventory
 
 ---
 
-# ⚙️ Backend Setup
+#  Backend Setup
 
 ## Create Virtual Environment
 
@@ -138,7 +138,7 @@ http://localhost:8000/docs
 
 ---
 
-# 💻 Frontend Setup
+#  Frontend Setup
 
 Install Packages
 
@@ -160,7 +160,7 @@ http://localhost:4200
 
 ---
 
-# 🐳 Docker
+#  Docker
 
 Build Image
 
@@ -182,7 +182,7 @@ docker ps
 
 ---
 
-# ☁️ AWS Deployment
+#  AWS Deployment
 
 The application is deployed using:
 
@@ -206,7 +206,7 @@ Running Application
 
 ---
 
-# 📡 API Endpoints
+#  API Endpoints
 
 Authentication
 
