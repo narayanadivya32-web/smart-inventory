@@ -1,185 +1,180 @@
-# Smart Inventory Management System
+# 🚀 Smart Inventory Management System
 
-## Project Overview
+A full-stack Inventory Management System built using **FastAPI**, **Angular**, **PostgreSQL**, **Docker**, and **AWS**.
 
-Smart Inventory Management System is a full-stack inventory tracking application developed using FastAPI, Angular, PostgreSQL, Docker, and AWS.
-
-The application allows users to manage products, track stock movements, monitor inventory levels, and generate reports through a modern web interface.
+The application helps businesses efficiently manage products, track inventory movements, monitor stock levels, and generate inventory reports. The backend is containerized using Docker and deployed on **Amazon ECS (Fargate)** with the Docker image stored in **Amazon ECR**.
 
 ---
 
-## Features
+# 📌 Features
 
-### Authentication
+## Authentication
 
-* JWT-based authentication
-* Secure login endpoint
-* Protected APIs
+* JWT Authentication
+* Secure Login
+* Protected REST APIs
 
-### Product Management
+## Product Management
 
-* Add new products
-* View product list
-* Product SKU management
-* Category management
+* Add Products
+* View Products
+* Update Inventory
+* Category Management
 
-### Inventory Movement
+## Inventory Management
 
 * Stock In
 * Stock Out
-* Quantity tracking
-* Movement history
+* Inventory Tracking
+* Product Quantity Updates
 
-### Dashboard
+## Reports
 
-* Total products overview
-* Inventory summary
-* Quick navigation
+* Inventory Reports
+* Movement History
+* Stock Summary
 
-### Reports
+## Dashboard
 
-* Inventory history
-* Stock movement tracking
-* Reorder monitoring
+* Product Statistics
+* Inventory Overview
+* Quick Navigation
 
 ---
 
-## Technology Stack
+# 🛠 Technology Stack
 
-### Backend
+## Backend
 
 * FastAPI
 * Python
+* SQLAlchemy
 * PostgreSQL
-* SQL
 * JWT Authentication
 
-### Frontend
+## Frontend
 
-* Angular 21
+* Angular 20
 * TypeScript
 * HTML5
 * CSS3
 
-### DevOps & Cloud
+## DevOps & Cloud
 
 * Docker
-* AWS ECR
-* AWS ECS (Fargate)
+* Amazon ECR
+* Amazon ECS (Fargate)
+* AWS Cloud
+
+## Version Control
+
+* Git
 * GitHub
 
 ---
 
-## Project Structure
+# 📂 Project Structure
 
 ```text
-smart-inventory/
+smart-inventory
 │
-├── backend/
-│   ├── app/
-│   │   ├── routes/
-│   │   ├── dependencies/
-│   │   ├── utils/
-│   │   ├── database.py
-│   │   ├── security.py
-│   │   └── main.py
-│   │
-│   ├── scripts/
-│   ├── tests/
+├── backend
+│   ├── app
+│   ├── scripts
+│   ├── tests
 │   ├── Dockerfile
 │   └── requirements.txt
 │
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   ├── angular.json
+├── frontend
+│   ├── src
+│   ├── public
 │   ├── package.json
-│   └── tsconfig.json
+│   └── angular.json
 │
 └── README.md
 ```
 
 ---
 
-## Backend Setup
+# ⚙️ Backend Setup
 
-### Create Virtual Environment
+## Create Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
-### Activate Environment
+## Activate
 
-Windows:
+Windows
 
 ```bash
 venv\Scripts\activate
 ```
 
-### Install Dependencies
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Run FastAPI Server
+## Run Backend
 
 ```bash
 python -m uvicorn app.main:app --reload
 ```
 
-Backend URL:
+Backend
 
-```text
+```
 http://localhost:8000
 ```
 
-Swagger Documentation:
+Swagger
 
-```text
+```
 http://localhost:8000/docs
 ```
 
 ---
 
-## Frontend Setup
+# 💻 Frontend Setup
 
-### Install Dependencies
+Install Packages
 
 ```bash
 npm install
 ```
 
-### Run Angular Application
+Run Angular
 
 ```bash
 ng serve
 ```
 
-Frontend URL:
+Frontend
 
-```text
+```
 http://localhost:4200
 ```
 
 ---
 
-## Docker
+# 🐳 Docker
 
-### Build Image
+Build Image
 
 ```bash
 docker build -t smartinventory .
 ```
 
-### Run Container
+Run Container
 
 ```bash
 docker run -p 8000:8000 smartinventory
 ```
 
-### Verify Running Containers
+Verify
 
 ```bash
 docker ps
@@ -187,87 +182,93 @@ docker ps
 
 ---
 
-## AWS Deployment
+# ☁️ AWS Deployment
 
-### Services Used
+The application is deployed using:
 
-* Amazon Elastic Container Registry (ECR)
-* Amazon Elastic Container Service (ECS)
-* AWS Fargate
+* Amazon ECS (Fargate)
+* Amazon ECR
 * Docker
 
-### Deployment Steps
+Deployment Flow
 
-1. Build Docker image
-2. Push image to ECR
-3. Create ECS Cluster
-4. Deploy ECS Service
-5. Access application through ECS
+```
+GitHub
+      ↓
+Docker Build
+      ↓
+Amazon ECR
+      ↓
+Amazon ECS
+      ↓
+Running Application
+```
 
 ---
 
-## API Endpoints
+# 📡 API Endpoints
 
-### Authentication
+Authentication
 
-```http
+```
 POST /api/auth/token
 ```
 
-### Products
+Products
 
-```http
+```
 GET /api/products
 POST /api/products
 ```
 
-### Movements
+Inventory
 
-```http
+```
 GET /api/movements
 POST /api/movements
 ```
 
-### Reports
+Reports
 
-```http
+```
 GET /api/reports
 ```
 
 ---
 
-## Screenshots Included
+# 📷 Screenshots
 
 * Login Page
 * Dashboard
 * Product Management
-* Swagger API Documentation
-* Docker Container Running
-* AWS ECR Repository
-* AWS ECS Cluster
+* Swagger Documentation
+* Docker Running
+* Amazon ECR
+* Amazon ECS
 
 ---
 
-## GitHub Repository
+# 🚀 Future Enhancements
 
-Repository URL:
+* Role-Based Access Control (Admin, Manager, Employee)
+* Deploy Frontend using AWS Amplify
+* Amazon RDS Integration
+* Barcode & QR Code Scanner
+* Email Notifications
+* Redis Caching
+* GitHub Actions CI/CD
+* AWS CloudWatch Monitoring
+* Export Reports to Excel & PDF
+* Dashboard Analytics
+* HTTPS with Custom Domain
 
+---
+
+# 👩‍💻 Author
+
+**Divya Narayan**
+
+GitHub:
 https://github.com/narayanadivya32-web/smart-inventory
 
----
-
-## Author
-
-Divya Narayana
-
-Full Stack Inventory Management Assignment
-
-Technologies Used:
-
-* FastAPI
-* Angular
-* PostgreSQL
-* Docker
-* AWS ECR
-* AWS ECS
-* GitHub
+Built using FastAPI, Angular, Docker and AWS.
